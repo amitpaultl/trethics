@@ -207,18 +207,15 @@ $(document).ready(function () {
     // shows Video only for Desktop
     var pageYoutube = $('#page-youtube');
 
-    if (pageYoutube.length && !isMobile && !isTouch) {
+    if (pageYoutube.length) {
       pageYoutube.YTPlayer({
         fitToBackground: true,
         videoId: pageYoutube.data("video-id"),
         playerVars: {
-          modestbranding: 0,
-          autoplay: 1,
-          controls: 0,
-          showinfo: 0,
-          branding: 0,
+          modestbranding: 1,
+          autoplay: 0,
+          controls: 1,
           rel: 0,
-          autohide: 0,
           start: 0
         }
       });
@@ -232,7 +229,7 @@ $(document).ready(function () {
     // shows Video only for Desktop
     var pageVideo = $('#page-video');
 
-    if (pageVideo.length && !isMobile && !isTouch) {
+    if (pageVideo.length) {
       new $.backgroundVideo($("body"), {
         "align": "centerXY",
         "width": 960,
